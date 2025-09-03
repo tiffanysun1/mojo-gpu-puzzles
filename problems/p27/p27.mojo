@@ -38,6 +38,46 @@ fn block_sum_dot_product[
 
 # ANCHOR_END: block_sum_dot_product
 
+
+# ANCHOR: traditional_dot_product
+fn traditional_dot_product[
+    in_layout: Layout, out_layout: Layout, tpb: Int
+](
+    output: LayoutTensor[mut=True, dtype, out_layout],
+    a: LayoutTensor[mut=False, dtype, in_layout],
+    b: LayoutTensor[mut=False, dtype, in_layout],
+    size: Int,
+):
+    """Traditional dot product using shared memory + barriers + tree reduction.
+    Educational but complex - shows the manual coordination needed."""
+
+    shared = tb[dtype]().row_major[tpb]().shared().alloc()
+    global_i = block_dim.x * block_idx.x + thread_idx.x
+    local_i = thread_idx.x
+
+    # Each thread computes partial product
+    if global_i < size:
+        a_val = rebind[Scalar[dtype]](a[global_i])
+        b_val = rebind[Scalar[dtype]](b[global_i])
+        shared[local_i] = a_val * b_val
+
+    barrier()
+
+    # Tree reduction in shared memory - complex but educational
+    var stride = tpb // 2
+    while stride > 0:
+        if local_i < stride:
+            shared[local_i] += shared[local_i + stride]
+        barrier()
+        stride //= 2
+
+    # Only thread 0 writes final result
+    if local_i == 0:
+        output[0] = shared[0]
+
+
+# ANCHOR_END: traditional_dot_product
+
 # ANCHOR: block_histogram
 alias bin_layout = Layout.row_major(SIZE)  # Max SIZE elements per bin
 
