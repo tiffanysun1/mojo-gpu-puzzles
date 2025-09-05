@@ -16,6 +16,7 @@ nsight-compute = "*"  # interactive kernel profiling
 
 [feature.cuda.pypi-dependencies]
 torch = { version = "==2.7.1", index = "https://download.pytorch.org/whl/cu128" }
+pynvml = "*"
 
 [feature.rocm]
 system-requirements = {}
@@ -143,6 +144,12 @@ p28 = "mojo problems/p28/p28.mojo"
 p29 = "mojo problems/p29/p29.mojo"
 
 p30 = "mojo problems/p30/p30.mojo"
+
+p31 = "mojo problems/p31/p31.mojo"
+
+# GPU information and profiling utilities
+gpu-info = { cmd = "nvidia-smi --query-gpu=name,compute_cap,memory.total,driver_version --format=csv", description = "Get basic GPU information" }
+gpu-specs = { cmd = "python3 scripts/gpu_specs.py", description = "Get complete GPU architectural specifications" }
 
 generate-animations = { cmd = "echo 'All animations generated!'", depends-on = ["viz01", "viz02", "viz03", "viz04", "viz05", "viz06", "viz07", "viz08", "viz11", "viz12", "viz13", "viz14", "viz15", "viz16", "rooflineviz", "thread_indexing"] }
 clean-animations = "find book/src -type d -name media | xargs rm -rf"

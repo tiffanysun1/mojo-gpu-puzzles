@@ -106,7 +106,7 @@
 - [Puzzle 30: GPU Profiling](./puzzle_30/puzzle_30.md)
   - [📚 NVIDIA Profiling Basics](./puzzle_30/nvidia_profiling_basics.md)
   - [🕵 The Cache Hit Paradox](./puzzle_30/profile_kernels.md)
-- [Puzzle 31: Occupancy Optimization]()
+- [Puzzle 31: Occupancy Optimization](./puzzle_31/puzzle_31.md)
 - [Puzzle 32: Bank Conflicts]()
   - [📚 Understanding Shared Memory Banks]()
   - [Conflict-Free Patterns]()

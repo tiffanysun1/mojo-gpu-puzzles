@@ -35,3 +35,4 @@ solutions/p16/p16_optimized
 *.sqlite
 *.txt
 problems/p30/p30_profiler
+problems/p31/p31_profiler
