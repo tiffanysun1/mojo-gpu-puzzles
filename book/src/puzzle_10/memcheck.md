@@ -38,7 +38,7 @@ expected: HostBuffer([10.0, 11.0, 12.0, 13.0])
 **Wrong!** Let's see what `compute-sanitizer` reveals:
 
 ```bash
-pixi run compute-sanitizer --tool memcheck mojo problems/p10/p10.mojo --memory-bug
+MODULAR_DEVICE_CONTEXT_BUFFER_CACHE_SIZE_PERCENT=0 pixi run compute-sanitizer --tool memcheck mojo problems/p10/p10.mojo --memory-bug
 ```
 
 ```txt
@@ -161,7 +161,7 @@ The fix is simple: **always validate thread indices against data dimensions** be
 
 ```bash
 # Fix the bounds checking in your copy of p10.mojo, then run:
-pixi run compute-sanitizer --tool memcheck mojo problems/p10/p10.mojo --memory-bug
+MODULAR_DEVICE_CONTEXT_BUFFER_CACHE_SIZE_PERCENT=0 pixi run compute-sanitizer --tool memcheck mojo problems/p10/p10.mojo --memory-bug
 ```
 
 ```txt
@@ -195,7 +195,7 @@ expected: HostBuffer([10.0, 11.0, 12.0, 13.0])
 ### Compute-sanitizer best practices
 
 ```bash
-pixi run compute-sanitizer --tool memcheck mojo your_code.mojo
+MODULAR_DEVICE_CONTEXT_BUFFER_CACHE_SIZE_PERCENT=0 pixi run compute-sanitizer --tool memcheck mojo your_code.mojo
 ```
 
 **Note**: You may see Mojo runtime warnings in the sanitizer output. Focus on the `========= Invalid` and `========= ERROR SUMMARY` lines for actual memory violations.
