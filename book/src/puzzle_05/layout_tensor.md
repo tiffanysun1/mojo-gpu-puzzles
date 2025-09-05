@@ -66,7 +66,7 @@ pixi run p05_layout_tensor
 Your output will look like this if the puzzle isn't solved yet:
 ```txt
 out: HostBuffer([0.0, 0.0, 0.0, 0.0])
-expected: HostBuffer([0.0, 1.0, 1.0, 2.0])
+expected: HostBuffer([1.0, 2.0, 11.0, 12.0])
 ```
 
 ## Solution
