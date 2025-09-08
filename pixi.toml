@@ -16,7 +16,7 @@ nsight-compute = "*"  # interactive kernel profiling
 
 [feature.cuda.pypi-dependencies]
 torch = { version = "==2.7.1", index = "https://download.pytorch.org/whl/cu128" }
-pynvml = "*"
+nvidia-ml-py = "*"
 
 [feature.rocm]
 system-requirements = {}
@@ -27,8 +27,8 @@ pytorch-triton-rocm = {version = "*", index = "https://download.pytorch.org/whl/
 
 [dependencies]
 python = "==3.12"
-max = "*"
 mojo = "*" # includes `mojo-compiler`, lsp, debugger, formatter etc.
+max = "*"
 bash = ">=5.2.21,<6"
 manim = ">=0.18.1,<0.19"
 mdbook = ">=0.4.48,<0.5"
