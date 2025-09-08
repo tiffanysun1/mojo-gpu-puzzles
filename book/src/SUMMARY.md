@@ -107,9 +107,9 @@
   - [📚 NVIDIA Profiling Basics](./puzzle_30/nvidia_profiling_basics.md)
   - [🕵 The Cache Hit Paradox](./puzzle_30/profile_kernels.md)
 - [Puzzle 31: Occupancy Optimization](./puzzle_31/puzzle_31.md)
-- [Puzzle 32: Bank Conflicts]()
-  - [📚 Understanding Shared Memory Banks]()
-  - [Conflict-Free Patterns]()
+- [Puzzle 32: Bank Conflicts](./puzzle_32/puzzle_32.md)
+  - [📚 Understanding Shared Memory Banks](./puzzle_32/shared_memory_bank.md)
+  - [Conflict-Free Patterns](./puzzle_32/conflict_free_patterns.md)
 
 # Part XI: 🚀 Advanced GPU Features
 - [Puzzle 33: Tensor Core Operations]()
