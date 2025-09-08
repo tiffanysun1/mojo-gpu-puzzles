@@ -300,7 +300,7 @@ def main():
         elif argv()[1] == "--benchmark":
             print("-" * 80)
             bench_config = BenchConfig(max_iters=100)
-            bench = Bench(bench_config)
+            bench = Bench(bench_config.copy())
 
             print("Testing SIZE=1 x WARP_SIZE, BLOCKS=1")
             bench.bench_function[

@@ -397,7 +397,7 @@ def main():
         print("SIMD width:", SIMD_WIDTH)
         print("-" * 80)
         bench_config = BenchConfig(max_iters=10, num_warmup_iters=1)
-        bench = Bench(bench_config)
+        bench = Bench(bench_config.copy())
 
         print("Testing SIZE=16, TILE=4")
         bench.bench_function[benchmark_elementwise_parameterized[16, 4]](
