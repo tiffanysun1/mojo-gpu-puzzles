@@ -117,8 +117,8 @@ This book takes you on a journey from first principles to advanced GPU programmi
 | Warp programming | ✅ **Available** | Part VII (24-26) |
 | Block-level programming | ✅ **Available** | Part VIII (27) |
 | Advanced memory operations | ✅ **Available** | Part IX (28-29) |
-| Performance analysis | 📋 **Coming Soon** | Part X (30-32) |
-| Modern GPU features | 📋 **Coming Soon** | Part XI (33-35) |
+| Performance analysis | ✅ **Available** | Part X (30-32) |
+| Modern GPU features | 🚧 **WIP** | Part XI (33-35) |
 
 ### Detailed Learning Objectives
 
@@ -174,12 +174,12 @@ This book takes you on a journey from first principles to advanced GPU programmi
 - Learn memory fences and synchronization primitives
 - Master prefetching and cache optimization strategies
 
-**Part X: Performance Analysis & Optimization (Puzzles 30-32) 📋**
+**Part X: Performance Analysis & Optimization (Puzzles 30-32) ✅**
 - Profile GPU kernels and identify bottlenecks
 - Optimize occupancy and resource utilization
 - Eliminate shared memory bank conflicts
 
-**Part XI: Advanced GPU Features (Puzzles 33-35) 📋**
+**Part XI: Advanced GPU Features (Puzzles 33-35) 🚧 **
 - Program tensor cores for AI workloads
 - Implement GPU-based random number generation
 - Master advanced synchronization patterns
