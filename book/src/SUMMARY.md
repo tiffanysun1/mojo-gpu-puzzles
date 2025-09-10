@@ -112,7 +112,8 @@
   - [Conflict-Free Patterns](./puzzle_32/conflict_free_patterns.md)
 
 # Part XI: 🚀 Advanced GPU Features
-- [Puzzle 33: Tensor Core Operations]()
+- [Puzzle 33: Tensor Core Operations](./puzzle_33/puzzle_33.md)
+  - [🎯 Performance Bonus Challenge](./bonuses/part5.md)
 - [Puzzle 34: Essential TMA Operations (H100+)]()
 - [Puzzle 35: GPU Cluster Programming (SM90+)]()
   - [Thread Block Clusters]()
