@@ -32,12 +32,12 @@ You'll need a [compatible GPU](https://docs.modular.com/max/faq#gpu-requirements
 
 2. Install a package manager to run the Mojo🔥 programs:
 
-    #### **(Recommended) Option 1**: [pixi](https://pixi.sh/latest/#installation)
+    #### **(Hightly recommended) Option 1**: [pixi](https://pixi.sh/latest/#installation)
 
     `pixi` is the **recommended option** for this project because:
-    - ✅ Easy access to Modular's MAX/Mojo packages
-    - ✅ Handles CUDA toolkit and GPU dependencies
-    - ✅ Full conda + PyPI ecosystem support
+    - Easy access to Modular's MAX/Mojo packages
+    - Handles GPU dependencies
+    - Full conda + PyPI ecosystem support
 
     **Note: A few puzzles only work with `pixi`.**
 
