@@ -12,10 +12,11 @@ from tensor import InputTensor, OutputTensor
 from gpu.memory import async_copy_wait_all
 from layout.layout_tensor import copy_dram_to_sram_async
 
-alias SEQ_LEN = 16 # This must be equal to SEQ_LEN in p19.py
-alias D = 16 # This must be equal to D in p19.py
+alias SEQ_LEN = 16  # This must be equal to SEQ_LEN in p19.py
+alias D = 16  # This must be equal to D in p19.py
 alias SOFTMAX_BLOCK_DIM_X = 1 << log2_ceil(SEQ_LEN)
 alias TPB = 16
+
 
 # Tiled matrix multiplication from p14 - adapted for attention
 fn matmul_idiomatic_tiled[

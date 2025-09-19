@@ -10,11 +10,12 @@ from bit import log2_ceil
 from utils.numerics import max_finite, min_finite
 
 
-alias SIZE = 128 # This must be equal to INPUT_SIZE in p18.py
+alias SIZE = 128  # This must be equal to INPUT_SIZE in p18.py
 alias layout = Layout.row_major(SIZE)
 alias GRID_DIM_X = 1
 # Tree-based reduction require the number of threads to be the next power of two >= SIZE for correctness.
 alias BLOCK_DIM_X = 1 << log2_ceil(SIZE)
+
 
 fn softmax_gpu_kernel[
     layout: Layout,

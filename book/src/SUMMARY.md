@@ -114,8 +114,7 @@
 # Part XI: 🚀 Advanced GPU Features
 - [Puzzle 33: Tensor Core Operations](./puzzle_33/puzzle_33.md)
   - [🎯 Performance Bonus Challenge](./bonuses/part5.md)
-- [Puzzle 34: Essential TMA Operations (H100+)]()
-- [Puzzle 35: GPU Cluster Programming (SM90+)]()
-  - [Thread Block Clusters]()
-  - [cluster_sync() Coordination]()
-  - [Advanced Cluster Patterns]()
+- [Puzzle 34: GPU Cluster Programming (SM90+)](./puzzle_34/puzzle_34.md)
+  - [🔰 Multi-Block Coordination Basics](./puzzle_34/cluster_coordination_basics.md)
+  - [☸️ Cluster-Wide Collective Operations](./puzzle_34/cluster_collective_ops.md)
+  - [🧠 Advanced Cluster Algorithms](./puzzle_34/advanced_cluster_patterns.md)
