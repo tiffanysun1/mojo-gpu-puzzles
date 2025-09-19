@@ -69,7 +69,7 @@ pixi run p07
 Your output will look like this if the puzzle isn't solved yet:
 ```txt
 out: HostBuffer([0.0, 0.0, 0.0, ... , 0.0])
-expected: HostBuffer([11.0, 11.0, 11.0, ... , 11.0])
+expected: HostBuffer([10.0, 11.0, 12.0, ... , 34.0])
 ```
 
 ## Solution
